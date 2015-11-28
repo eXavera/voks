@@ -1,0 +1,38 @@
+﻿.scrolls-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.scrolls {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.scrolls > * {
+    display: inline-block;
+}
+
+.category {
+    margin: 0px 10px;
+    text-align: center;
+}
+
+.category-thumbmails {
+    width: 130px;
+}
+
+    .category-thumbmails img {
+        width: 60px;
+        height: 60px;
+        float: left;
+    }
+
+.selectable-box {
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+    .selectable-box:hover {
+        border-color: black;
+    }
