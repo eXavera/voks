@@ -7,32 +7,26 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>VOKS</title>
-    <link href="@Url.Content("~/Content/normalize.css")" rel="stylesheet" />
-    <link href="@Url.Content("~/Content/site.css")" rel="stylesheet" />
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    <link href="~/Content/app.css" rel="stylesheet" />
 </head>
 <body>
     <div id="container">
         <div id="selected-images" class="scrolls-wrapper">
             <div class="scrolls">
-                @for (int i = 0; i < 20; i++)
-                {
-                    <div class="selectable-box">
-                        <img src="~/Content/Images/Categories/Hračky/Auticka.jpg" />
-                    </div>
-                }
             </div>
         </div>
         <div id="categories" class="scrolls-wrapper">
             <div class="scrolls">
                 @foreach (var category in Model.Categories)
                 {
-                    <div class="category selectable-box" data-images="@Json.Encode(category)">
+                    <div class="category selectable-box" data-category="@Json.Encode(category)">
                         <div class="category-title">@category.Name</div>
                         <div class="category-thumbmails">
-                            <img src="@Url.Content("~/Content/Images/loading.gif")" />
-                            <img src="@Url.Content("~/Content/Images/loading.gif")" />
-                            <img src="@Url.Content("~/Content/Images/loading.gif")" />
-                            <img src="@Url.Content("~/Content/Images/loading.gif")" />
+                            <img src="~/Content/Images/loading.gif" />
+                            <img src="~/Content/Images/loading.gif" />
+                            <img src="~/Content/Images/loading.gif" />
+                            <img src="~/Content/Images/loading.gif" />
                         </div>
                     </div>
                 }
@@ -40,19 +34,13 @@
         </div>
         <div id="images" class="scrolls-wrapper">
             <div class="scrolls">
-                @for (int i = 0; i < 20; i++)
-                {
-                    <div class="selectable-box">
-                        <img src="~/Content/Images/Categories/Hračky/Pexeso.jpg" />
-                    </div>
-                }
             </div>
         </div>
     </div>
 
     <input type="hidden" id="categories-base-path" value="@Model.CategoriesBasePath" />
 
-    <script src="@Url.Content("~/Scripts/jquery-1.11.3.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/app.js")"></script>
+    <script src="~/Scripts/jquery-1.11.3.min.js"></script>
+    <script src="~/Scripts/app.js"></script>
 </body>
 </html>

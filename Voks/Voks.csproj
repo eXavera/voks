@@ -1518,7 +1518,7 @@
     <Content Include="Content\Images\Categories\Školní potřeby\Vykresy.jpg" />
     <Content Include="Content\Images\loading.gif" />
     <Content Include="Content\normalize.css" />
-    <Content Include="Content\site.css" />
+    <Content Include="Content\app.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="Scripts\app.js" />

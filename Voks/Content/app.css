@@ -9,9 +9,9 @@
     white-space: nowrap;
 }
 
-.scrolls > * {
-    display: inline-block;
-}
+    .scrolls > * {
+        display: inline-block;
+    }
 
 .category {
     margin: 0px 10px;
@@ -35,4 +35,9 @@
 
     .selectable-box:hover {
         border-color: black;
+    }
+
+    .selectable-box.selected {
+        border-color: orange;
+        border-width: medium;
     }
