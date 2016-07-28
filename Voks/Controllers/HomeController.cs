@@ -7,7 +7,7 @@ namespace Voks.Controllers
 {
     public class HomeController : Controller
     {
-        private const string CATEGORIES_PATH = "~/Content/Images/Categories";
+        private const string CATEGORIES_PATH = "~/Content/app/Images/Categories";
 
         public ActionResult Index()
         {

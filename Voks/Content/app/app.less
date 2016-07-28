@@ -1,0 +1,104 @@
+﻿@charset 'utf-8';
+// VOKS Layout
+// 24.06.2016 [update]
+//------------------------------------------
+
+@import 'variables.less';
+
+body {
+    font-family: @font-family-sans-serif;
+    background-color: @thm-body-bg !important;
+}
+
+#header {
+    background-color: @thm-color-default;
+    min-height: 40px;
+    color: @thm-color-light-on-dark;
+    padding: @grid-gutter-width;
+}
+
+.scrolls-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.speach {
+    background-color: @table-bg;
+    min-height: 240px;
+}
+
+.groups {
+    background-color: @thm-color-secondary;
+    font-weight: 600;
+    font-family: @font-family-headlines;
+    font-size: @thm-text-120pr;
+}
+
+.items {
+    background-color: @thm-color-light;
+}
+
+.scrolls {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.scrolls > * {
+    display: inline-block;
+    padding: 15px;
+}
+
+.category {
+    margin: 0;
+    text-align: center;
+}
+
+.category-title {
+    margin-bottom: 3px;
+}
+
+.category-thumbmails {
+    width: 120px;
+    margin: auto;
+}
+
+.category-thumbmails img {
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.selectable-box {
+    cursor: pointer;
+}
+
+.selectable-box:hover {
+    background: @thm-color-secondary;
+    color: @thm-color-default;
+}
+
+.selectable-box.selected {
+    background-color: @thm-color-light;
+    color: @thm-color-default;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: @thm-color-light;
+    border-left: 1px solid @thm-color-light;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: @thm-color-default;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+    cursor: crosshair;
+}

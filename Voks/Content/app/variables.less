@@ -1,0 +1,250 @@
+﻿@charset 'utf-8';
+// VOKS Theme
+// 24.06.2016 [update]
+//------------------------------------------
+
+
+//-- Vychozi barvy
+//------------------------------------------
+@thm-body-bg:                   #ddd;    
+@thm-color-default:             #2A3F54;                                              
+
+@thm-color-primary:             #9DBEC7;                                                 
+@thm-color-secondary:           #CEDFE3;                                              
+
+@thm-color-light:               #9DBEC7;                                                   
+@thm-background-light:          #f5f5f5;                                                 
+@thm-color-light-on-dark:       #FAFAFA;                                                                        
+
+@thm-color-inactive:            #BABABA;                                                 
+@thm-color-hover:               #E6E7E7;                                                
+                  
+@table-bg:                      #FFFFFF;                                                  
+@thm-border-color:              #E2E2F0;                                                  
+@thm-stripes-bg:                #F0F0f0;                                                 
+
+@thm-radius:                    4px;                                                          
+
+@thm-shadow-color:              rgba(28,28,29,.55);                                             
+
+@font-family-sans-serif:        'Open Sans','PT Sans',Arial,sans-serif;                       
+@font-family-headlines:         'PT Sans','Open Sans',Arial,sans-serif;                     
+@font-size-base:                13px;                                                             
+
+@grid-gutter-width:             15px;                                        
+
+
+//-------  D E T A I L N I   N A S T A V E N I   --------//
+
+//-- STRANKA
+//------------------------------------------
+//-- Pozadi
+@background-image: none;                                                             
+@body-background-color: #FFF;                  
+@body-page-size: 100%;                                        
+
+
+//-- ZAHLAVI
+//------------------------------------------
+//-- Pruh logo
+@header-bg-grad-start: @thm-body-bg;                                                           
+@header-bg-grad-end: @thm-body-bg;                                                          
+
+
+//-- Custom
+//------------------------------------------
+@brand-primary:                 @thm-color-primary;                  
+                          
+//-- Odkazy
+//------------------------------------------
+@thm-link-color:                @thm-color-primary;                     
+@thm-link-color-hover:        	@thm-color-secondary;            
+@thm-link-decoration-hover:   	underline;                                    
+
+                          
+
+
+
+//== TYPOGRAFIE
+//==========================================
+//-- Nadpisy
+//------------------------------------------
+
+//## Font size
+@thm-text-350pr:  ceil((@font-size-base * 3.5));                            
+@thm-text-300pr:  ceil((@font-size-base * 3)); 
+@thm-text-250pr:  ceil((@font-size-base * 2.5));                            
+@thm-text-215pr:  ceil((@font-size-base * 2.15)); 
+@thm-text-200pr:  ceil((@font-size-base * 2));                           
+@thm-text-180pr:  ceil((@font-size-base * 1.8));                            
+@thm-text-150pr:  ceil((@font-size-base * 1.5));                            
+@thm-text-140pr:  ceil((@font-size-base * 1.4));                            
+@thm-text-130pr:  ceil((@font-size-base * 1.3));                            
+@thm-text-120pr:  ceil((@font-size-base * 1.2));                            
+@thm-text-110pr:  ceil((@font-size-base * 1.1));                            
+@thm-text-100pr:  ceil((@font-size-base * 1));                      //**  zakladni velikost pisma 100 procent, ostatni jsou odvozene                             
+@thm-text-090pr:  ceil((@font-size-base * 0.9));                            
+@thm-text-085pr:  ceil((@font-size-base * 0.85));                           
+@thm-text-080pr:  ceil((@font-size-base * 0.8));                            
+@thm-text-075pr:  ceil((@font-size-base * 0.75));                           
+@thm-text-070pr:  ceil((@font-size-base * 0.7));                            
+@thm-text-060pr:  ceil((@font-size-base * 0.6));                            
+@thm-text-050pr:  ceil((@font-size-base * 0.5));                            
+@thm-text-040pr:  ceil((@font-size-base * 0.4));                            
+@thm-text-030pr:  ceil((@font-size-base * 0.3));                            
+
+@thm-headline-level1-color: @thm-color-primary;                                    
+@thm-headline-level2-color: #555;                     
+@thm-headline-level3-color: @thm-color-secondary;                           
+@thm-headline-level4-color: @thm-color-secondary;                        
+@thm-headline-level5-color: @thm-color-default;                          
+@thm-headline-level6-color: @thm-color-default;                             
+
+@font-size-h1:  floor((@font-size-base * 2.4));                     
+@font-size-h2:  floor((@font-size-base * 1.7));                     
+@font-size-h3:  @thm-text-120pr;                                    
+@font-size-h4:  @thm-text-120pr;                                   
+
+@thm-headline-level1-border: 0 solid @thm-border-color;             
+@thm-headline-level2-border: 1px solid @thm-border-color;           
+@thm-headline-level3-border: 1px solid @thm-border-color;             
+
+
+//== Tlacitka
+//==========================================
+//
+//-- Varianty tlacitek
+//------------------------------------------
+@thm-btn-text-transform:          uppercase;                                        //**  text tlacitka [uppercase, smallcaps...]                                 
+@thm-btn-color:                   @thm-color-light-on-dark;                         //**  barva textu tlacitka                      
+@thm-btn-color-hover:             @thm-color-light-on-dark;                         //**  barva textu tlacitka pri najeti mysi                
+
+@btn-primary-bg-grad-start:       @thm-color-secondary;                             //**  pozadi tlacitka - pocatecni barva gradientu                 
+@btn-primary-bg-grad-end:         @thm-color-secondary;                             //**  pozadi tlacitka - konecna barva gradientu                               
+
+@btn-primary-bg-grad-start-hover: darken(@thm-color-secondary,10%);                 //**  pozadi tlacitka po najeti mysi - pocatecni barva gradientu                                                
+@btn-primary-bg-grad-end-hover:   darken(@thm-color-secondary,10%);                 //**  pozadi tlacitka - konecna barva gradientu                                                            
+
+@btn-primary-color:               @thm-color-light-on-dark;                         //**  barva textu tlacitka                         
+@btn-primary-border:              transparent;                                      //**  barva oramovani tlacitka 
+
+
+
+//== HLAVICKA 
+//==========================================
+//
+//-- Navigace - topmenu
+//------------------------------------------
+@navbar-float: left;                                                 //**  zarovnani 
+@navbar-default-link-weight: normal;                                 //**  sila pisma
+@navbar-height: 90px;                                                //**  vyska menu
+@navbar-margin-bottom: 0;                                            //**  mezera zdola
+@navbar-padding-horizontal: 0;                                       //**  mezera shora
+@navbar-default-bg: @thm-body-bg;                                    //**  pozadi hlavicka
+@navbar-default-border: 0;                                           //**  oramovani pod menu
+@navbar-default-link-color: @thm-color-default;                      //**  barva textu - vychozi
+@navbar-default-link-hover-color: @thm-color-primary;                //**  barva textu po najeti mysi
+@navbar-default-link-active-color: @thm-color-light;                 //**  barva textu aktivni polozky
+@navbar-default-link-active-bg:  @thm-color-secondary;               //**  #EAEAEA;  barva pozadi aktivni polozky
+@nav-link-padding: 20px;                                             //**  odsazeni textove polozky
+@nav-link-hover-bg: @thm-body-bg;                                    //**  pozadi polozky po najeti mysi                         
+// @navbar-padding-vertical: 10px;                                   
+//(DEFAULT) @nav-disabled-link-color 
+//(DEFAULT) @nav-disabled-link-hover-color 
+//(DEFAULT) @navbar-collapse-max-height 
+//(DEFAULT) @navbar-default-color 
+//(DEFAULT) @navbar-default-link-hover-bg 
+//(DEFAULT) @navbar-border-radius 
+//(DEFAULT) @navbar-default-link-disabled-color 
+//(DEFAULT) @navbar-default-link-disabled-bg 
+//(DEFAULT) @navbar-default-brand-color 
+//(DEFAULT) @navbar-default-brand-hover-color 
+//(DEFAULT) @navbar-default-brand-hover-bg 
+//(DEFAULT) @navbar-default-toggle-hover-bg 
+//(DEFAULT) @navbar-default-toggle-icon-bar-bg 
+//(DEFAULT) @navbar-default-toggle-border-color
+
+
+//-- Jumbotron
+//------------------------------------------
+//
+//(DEFAULT) @jumbotron-padding 
+//(DEFAULT) @jumbotron-color 
+@jumbotron-bg: transparent;
+//(DEFAULT) @jumbotron-heading-color 
+//(DEFAULT) @jumbotron-font-size 
+//(DEFAULT) @jumbotron-heading-font-size 
+
+
+//== MENU VLEVO
+//==========================================
+//
+
+//-- Polozky menu
+//------------------------------------------
+//(DEFAULT) @nav-pills-border-radius 
+//(DEFAULT) @nav-pills-active-link-hover-bg 
+//(DEFAULT) @nav-pills-active-link-hover-color
+
+
+
+//== OBSAH 
+//==========================================
+//
+
+//-- Drobeckova navigace
+//------------------------------------------
+@breadcrumb-float: left;                                            //**  zarovnani
+@breadcrumb-padding-vertical: 0;                                    //**  odsazeni vertikalne
+@breadcrumb-padding-horizontal: 0;                                  //**  odsazeni horizontalne
+@breadcrumb-bg: transparent;                                        //**  pozadi
+@breadcrumb-separator:">";                                          //**  oddelovac mezi polozkami
+//(DEFAULT) @breadcrumb-color 
+//(DEFAULT) @breadcrumb-active-color 
+
+
+
+//== FORMULARE 
+//==========================================
+//
+
+@input-bg: @thm-body-bg;                                            //**  pozadi formularovych prvku
+@input-border: @thm-border-color;                                   //**  oramovani
+@input-border-radius: @thm-radius;                                  //**  radius rohu - default
+@input-border-radius-large: @thm-radius;                            //**  radius rohu - velke rozliseni
+@input-border-radius-small: @thm-radius;                            //**  radius rohu - male rozliseni
+@input-border-focus: @thm-color-primary;                            //**  barva oramovani - focus
+@input-color-placeholder: redhm-color-inactive;                     //**  barva textu napovedy ve formularovych prvcich
+//(DEFAULT) @input-bg-disabled 
+//(DEFAULT) @input-color 
+//(DEFAULT) @input-height-base 
+//(DEFAULT) @input-height-large 
+//(DEFAULT) @input-height-small 
+//(DEFAULT) @form-group-margin-bottom 
+//(DEFAULT) @legend-color 
+//(DEFAULT) @legend-border-color 
+//(DEFAULT) @input-group-addon-bg 
+//(DEFAULT) @input-group-addon-border-color 
+//(DEFAULT) @cursor-disabled 
+ 
+
+
+//== ZAPATI 
+//==========================================
+//
+@footer-bg-grad-start: @thm-color-primary;                   
+@footer-bg-grad-end: @thm-color-primary;                   
+@footer-color: #6E6E6E;                  
+
+//-- Socialni site
+//------------------------------------------
+@social-text-color: #9D9D9D;                                        //**  barva textu
+@social-bg-facebook: #3C548E;                                       //**  barva pozadi facebook
+@social-bg-twitter: #1EB8E6;                                        //**  barva pozadi twitter
+@social-bg-youtube: #F23F4C;                                        //**  barva pozadi youtube
+@social-bg-google: #EB423B;                                         //**  barva pozadi google plus
+@social-bg-email: #FF6600;                                          //**  barva pozadi email
+
+
+
+

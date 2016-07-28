@@ -7,32 +7,40 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>VOKS</title>
-    <link href="~/Content/normalize.css" rel="stylesheet" />
-    <link href="~/Content/app.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>  
+    @Styles.Render("~/bundles/css")
 </head>
 <body>
+    <section id="header">
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="~/Content/app/Images/logo-voks.png" />
+            </div>
+        </div>
+    </section>
     <div id="container">
-        <div id="selected-images" class="scrolls-wrapper">
+        <div id="selected-images" class="scrolls-wrapper speach">
             <div class="scrolls">
             </div>
         </div>
-        <div id="categories" class="scrolls-wrapper">
+        <div id="categories" class="scrolls-wrapper groups">
             <div class="scrolls">
                 @foreach (var category in Model.Categories)
                 {
                     <div class="category selectable-box" data-category="@Json.Encode(category)">
                         <div class="category-title">@category.Name</div>
                         <div class="category-thumbmails">
-                            <img src="~/Content/Images/loading.gif" />
-                            <img src="~/Content/Images/loading.gif" />
-                            <img src="~/Content/Images/loading.gif" />
-                            <img src="~/Content/Images/loading.gif" />
+                            <img src="~/Content/app/Images/loading.gif" />
+                            <img src="~/Content/app/Images/loading.gif" />
+                            <img src="~/Content/app/Images/loading.gif" />
+                            <img src="~/Content/app/Images/loading.gif" />
                         </div>
                     </div>
                 }
             </div>
         </div>
-        <div id="images" class="scrolls-wrapper">
+        <div id="images" class="scrolls-wrapper items">
             <div class="scrolls">
             </div>
         </div>
