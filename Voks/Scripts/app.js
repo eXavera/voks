@@ -60,9 +60,6 @@
 
     // selected images
     $selectedImages.on('click', '.selectable-box', function () {
-        var $image = $(this);
-        $image.animate({ width: 0 }, 300, 'linear', function () {
-            $image.remove();
-        });
+        $(this).remove();
     });
 });
