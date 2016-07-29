@@ -1,6 +1,14 @@
 ﻿$(function () {
     'use strict';
 
+    var getCategoryThumbmailImages = function (category) {
+        var images = [];
+        for (var i = 0; i < 4 && i < category.Images.length; i++) {
+            images.push(category.Images[i]);
+        }
+        return images;
+    };
+
     var categoriesBasePath = $('#categories-base-path').val();
     var $availableImages = $('#images > .scrolls');
     var $selectedImages = $('#selected-images > .scrolls');
@@ -34,9 +42,11 @@
         var $category = $(this);
         var category = $category.data('category');
 
+        var thumbmailImages = getCategoryThumbmailImages(category);
+
         var thumbmailsHtml = '';
-        for (var i = 0; i < 4; i++) {
-            var imagePath = categoriesBasePath + '/' + category.Name + '/' + category.Images[i];
+        for (var i = 0; i < thumbmailImages.length; i++) {
+            var imagePath = categoriesBasePath + '/' + category.Name + '/' + thumbmailImages[i];
             thumbmailsHtml += '<img src="' + imagePath + '" />';
         }
 
