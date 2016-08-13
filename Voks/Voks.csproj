@@ -1639,6 +1639,7 @@
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Content\app\app.less" />
     <Content Include="Content\app\variables.less" />
+    <None Include="Properties\PublishProfiles\voks.amenit.cz.pubxml" />
     <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
