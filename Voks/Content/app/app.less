@@ -5,6 +5,8 @@
 
 @import 'variables.less';
 
+@scrollButtonWidth: 100px;
+
 body {
     font-family: @font-family-sans-serif;
     background-color: @thm-body-bg !important;
@@ -19,7 +21,8 @@ body {
 
 .scrolls-wrapper {
     position: relative;
-    width: 100%;
+    width: calc(~"100% -" @scrollButtonWidth *2);
+    float: left;
 }
 
 #selected-images {
@@ -101,4 +104,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #aaa;
     cursor: crosshair;
+}
+
+button.forward, button.back {
+    float: left;
+    width: @scrollButtonWidth;
 }

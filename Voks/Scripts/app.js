@@ -3,6 +3,44 @@
 
     var categoriesBasePath = $('#categories-base-path').val();
 
+    var setupScrollButtons = function ($section) {
+        var $scrolls = $section.find('.scrolls');
+
+        var getOffsets = function () {
+            return $scrolls.find('.selectable-box').map(function () {
+                return this.offsetLeft;
+            });
+        };
+
+        var setupButton = function (selector, getNewOffset) {
+            $section.on('click', selector, function () {
+                var offsets = getOffsets();
+
+                $scrolls.animate({
+                    scrollLeft: getNewOffset(offsets, $scrolls.scrollLeft())
+                }, 250);
+            });
+        };
+
+        setupButton('.back', function (offsets, currentOffset) {
+            for (var i = offsets.length - 1; i >= 0; i--) {
+                if (offsets[i] < currentOffset) {
+                    return offsets[i];
+                }
+            }
+            return currentOffset;
+        });
+
+        setupButton('.forward', function (offsets, currentOffset) {
+            for (var i = 0; i < offsets.length; i++) {
+                if (offsets[i] > currentOffset) {
+                    return offsets[i];
+                }
+            }
+            return currentOffset;
+        });
+    };
+
     var setupCategories = function (callbacks) {
         var getThumbmailImages = function (category) {
             var images = [];
@@ -34,6 +72,8 @@
             $category.find('.category-thumbmails').html(thumbmailsHtml);
         });
 
+        setupScrollButtons($('#categories'));
+
         $(document).on('click', '.category', function () {
             selectCategory($(this));
         });
@@ -41,7 +81,9 @@
     };
 
     var setupAvailableImages = function (callbacks) {
-        var $availableImages = $('#images > .scrolls');
+        var $availableImages = $('#images .scrolls');
+        setupScrollButtons($('#images'));
+
         var createImageHtml = function (imagePath) {
             var fullPath = categoriesBasePath + '/' + imagePath;
             return '<div class="selectable-box"><img src="' + fullPath + '" /></div>';
@@ -65,7 +107,9 @@
     };
 
     var selectedImages = (function () {
-        var $selectedImages = $('#selected-images > .scrolls');
+        var $selectedImages = $('#selected-images .scrolls');
+        setupScrollButtons($('#selected-images'));
+
         var appendImage = function (image) {
             $selectedImages.append(image.outerHTML);
         };

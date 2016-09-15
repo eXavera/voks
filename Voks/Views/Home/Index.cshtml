@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>VOKS</title>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     @Styles.Render("~/bundles/css")
 </head>
 <body>
@@ -20,29 +20,43 @@
         </div>
     </section>
     <div id="container">
-        <div id="selected-images" class="scrolls-wrapper">
-            <div class="scrolls">
+        <div id="selected-images">
+            <button class="back">Back</button>
+            <div class="scrolls-wrapper">
+                <div class="scrolls">
+                </div>
             </div>
+            <button class="forward">Forward</button>
         </div>
-        <div id="categories" class="scrolls-wrapper">
-            <div class="scrolls">
-                @foreach (var category in Model.Categories)
-                {
-                    <div class="category selectable-box" data-category="@Json.Encode(category)">
-                        <div class="category-title">@category.Name</div>
-                        <div class="category-thumbmails">
-                            <img src="~/Content/app/Images/loading.gif" />
-                            <img src="~/Content/app/Images/loading.gif" />
-                            <img src="~/Content/app/Images/loading.gif" />
-                            <img src="~/Content/app/Images/loading.gif" />
+        <div style="clear: both"></div>
+        <div id="categories">
+            <button class="back">Back</button>
+            <div class="scrolls-wrapper">
+                <div class="scrolls">
+                    @foreach (var category in Model.Categories)
+                    {
+                        <div class="category selectable-box" data-category="@Json.Encode(category)">
+                            <div class="category-title">@category.Name</div>
+                            <div class="category-thumbmails">
+                                <img src="~/Content/app/Images/loading.gif" />
+                                <img src="~/Content/app/Images/loading.gif" />
+                                <img src="~/Content/app/Images/loading.gif" />
+                                <img src="~/Content/app/Images/loading.gif" />
+                            </div>
                         </div>
-                    </div>
-                }
+                    }
+                </div>
             </div>
+            <button class="forward">Forward</button>
         </div>
-        <div id="images" class="scrolls-wrapper">
-            <div class="scrolls">
+        <div style="clear: both"></div>
+        <div id="images">
+            <button class="back">Back</button>
+            <div class="scrolls-wrapper">
+                <div class="scrolls">
+                </div>
             </div>
+            <button class="forward">Forward</button>
         </div>
     </div>
 
