@@ -130,6 +130,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\app\app.css">
+      <DependentUpon>app.less</DependentUpon>
+    </Content>
+    <Content Include="Content\app\app.min.css">
+      <DependentUpon>app.css</DependentUpon>
+    </Content>
     <Content Include="Content\app\Images\bg-scroll.png" />
     <Content Include="Content\app\Images\Categories\Barvy\Barva.jpg" />
     <Content Include="Content\app\Images\Categories\Barvy\Bila.jpg" />
@@ -1639,6 +1645,9 @@
     <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="Content\app\app.less" />
     <Content Include="Content\app\variables.less" />
+    <Content Include="Content\app\app.css.map">
+      <DependentUpon>app.css</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\voks.amenit.cz.pubxml" />
     <None Include="Scripts\jquery-1.11.3.intellisense.js" />
     <Content Include="Scripts\app.js" />

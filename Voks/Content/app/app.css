@@ -1,0 +1,98 @@
+﻿@charset 'utf-8';
+body {
+  font-family: 'Open Sans', 'PT Sans', Arial, sans-serif;
+  background-color: #dddddd !important;
+}
+#header {
+  background-color: #2a3f54;
+  min-height: 40px;
+  color: #fafafa;
+  padding: 15px;
+}
+.scrolls-wrapper {
+  position: relative;
+  width: calc(100% - 200px);
+  float: left;
+}
+#selected-images {
+  background-color: #ffffff;
+  min-height: 240px;
+}
+#categories {
+  background-color: #cedfe3;
+  font-weight: 600;
+  font-family: 'PT Sans', 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+}
+#images {
+  background-color: #9dbec7;
+}
+.scrolls {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.scrolls > * {
+  display: inline-block;
+  padding: 15px;
+}
+.category {
+  margin: 0;
+  text-align: center;
+}
+.category-title {
+  margin-bottom: 3px;
+}
+.category-thumbmails {
+  width: 160px;
+  margin: auto;
+}
+.category-thumbmails img {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+.selectable-box {
+  cursor: pointer;
+}
+.selectable-box:hover {
+  background: #cedfe3;
+  color: #2a3f54;
+}
+.selectable-box.selected {
+  background-color: #9dbec7;
+  color: #2a3f54;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: #9dbec7;
+  border-left: 1px solid #9dbec7;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2a3f54;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+  cursor: crosshair;
+}
+button.forward,
+button.back {
+  float: left;
+  margin-top: 1%;
+  width: 100px;
+  vertical-align: middle;
+  color: #2a3f54;
+  font-size: 9em;
+  background-image: none;
+  background-color: transparent;
+  border: none;
+}
+button.forward:hover,
+button.back:hover {
+  color: #9dbec7;
+}
+/*# sourceMappingURL=app.css.map */

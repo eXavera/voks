@@ -9,7 +9,9 @@
     <title>VOKS</title>
     <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @Styles.Render("~/bundles/css")
+
 </head>
 <body>
     <section id="header">
@@ -21,16 +23,16 @@
     </section>
     <div id="container">
         <div id="selected-images">
-            <button class="back">Back</button>
+            <button class="back"><i class="fa fa-caret-left"></i></button>
             <div class="scrolls-wrapper">
                 <div class="scrolls">
                 </div>
             </div>
-            <button class="forward">Forward</button>
+            <button class="forward"><i class="fa fa-caret-right"></i></button>
         </div>
         <div style="clear: both"></div>
         <div id="categories">
-            <button class="back">Back</button>
+            <button class="back"><i class="fa fa-caret-left"></i></button>
             <div class="scrolls-wrapper">
                 <div class="scrolls">
                     @foreach (var category in Model.Categories)
@@ -47,16 +49,16 @@
                     }
                 </div>
             </div>
-            <button class="forward">Forward</button>
+            <button class="forward"><i class="fa fa-caret-right"></i></button>
         </div>
         <div style="clear: both"></div>
         <div id="images">
-            <button class="back">Back</button>
+            <button class="back"><i class="fa fa-caret-left"></i></button>
             <div class="scrolls-wrapper">
                 <div class="scrolls">
                 </div>
             </div>
-            <button class="forward">Forward</button>
+            <button class="forward"><i class="fa fa-caret-right"></i></button>
         </div>
     </div>
 
