@@ -41,6 +41,19 @@
         });
     };
 
+    var setupHorizontalMouseWheelScrolling = function ($section) {
+        var $scrolls = $section.find('.scrolls');
+
+        $scrolls.on('wheel', function (e) {
+            var delta = e.originalEvent.deltaY;
+            if (delta !== 0) {
+                $scrolls.scrollLeft($scrolls.scrollLeft() + (delta > 0 ? 50 : -50));
+
+                e.preventDefault();
+            }
+        });
+    };
+
     var setupCategories = function (callbacks) {
         var getThumbmailImages = function (category) {
             var images = [];
@@ -72,7 +85,9 @@
             $category.find('.category-thumbmails').html(thumbmailsHtml);
         });
 
-        setupScrollButtons($('#categories'));
+        var $section = $('#categories');
+        setupScrollButtons($section);
+        setupHorizontalMouseWheelScrolling($section);
 
         $(document).on('click', '.category', function () {
             selectCategory($(this));
@@ -81,8 +96,11 @@
     };
 
     var setupAvailableImages = function (callbacks) {
-        var $availableImages = $('#images .scrolls');
-        setupScrollButtons($('#images'));
+        var $section = $('#images');
+        var $availableImages = $section.find('.scrolls');
+
+        setupScrollButtons($section);
+        setupHorizontalMouseWheelScrolling($section);
 
         var createImageHtml = function (imagePath) {
             var fullPath = categoriesBasePath + '/' + imagePath;
@@ -107,8 +125,11 @@
     };
 
     var selectedImages = (function () {
-        var $selectedImages = $('#selected-images .scrolls');
-        setupScrollButtons($('#selected-images'));
+        var $section = $('#selected-images');
+        var $selectedImages = $section.find('.scrolls');
+
+        setupScrollButtons($section);
+        setupHorizontalMouseWheelScrolling($section);
 
         var appendImage = function (image) {
             $selectedImages.append(image.outerHTML);
